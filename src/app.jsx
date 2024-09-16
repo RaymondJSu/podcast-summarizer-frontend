@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Podcast Summarizer.Ai</h1>
-        <h3>Podcast Summary Powered by GenAI</h3>
+        <p>Podcast Summaries Powered by GenAI</p>
       </header>
       <main>
         <EpisodeList />
