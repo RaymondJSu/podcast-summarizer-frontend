@@ -10,7 +10,7 @@ const EpisodeList = () => {
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        const response = await fetch('https://podcast-api-oxb4.onrender.com/api/episodes');
+        const response = await fetch(`${APIUrl}`);
         const data = await response.json();
         setEpisodes(data);
         setLoading(false);
