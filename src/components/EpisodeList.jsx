@@ -5,7 +5,7 @@ import '../App.css';
 const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const APIUrl = process.env.REACT_APP_API_URL
+  const APIUrl = process.env.APIUrl;
 
   // Fetch data from your Render backend API
   useEffect(() => {
