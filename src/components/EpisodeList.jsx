@@ -5,16 +5,18 @@ import '../App.css';
 const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const apiUrl = process.env.REACT_APP_API_URL;
+  const apiUrl = process.env.REACT_APP_API_URL
 
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        const response = await fetch(`${apiUrl}`);
+        const response = await fetch(apiUrl);
         const data = await response.json();
         setEpisodes(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching episodes:", error);
+        setLoading(false);
       }
     };
   
