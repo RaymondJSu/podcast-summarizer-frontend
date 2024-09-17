@@ -10,9 +10,6 @@ const EpisodeList = () => {
   useEffect(() => {
     const fetchEpisodes = async () => {
       try {
-        console.log("fetching episodes")
-        console.log(apiUrl)
-        console.log(process.env.REACT_APP_API_URL)
         const response = await fetch(apiUrl);
         const data = await response.json();
         setEpisodes(data);
